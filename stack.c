@@ -50,7 +50,7 @@ struct stack* pop(struct stack* head)
 
 struct stack* push(struct stack* head, int x)
 {
-	struct stack* new = malloc(sizeof(struct stack));
+	struct stack* new = (struct stack*)malloc(sizeof(struct stack));
 	if (new == NULL)
 		exit(100);
 	new->data = x;
