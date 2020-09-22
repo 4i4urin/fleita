@@ -19,13 +19,11 @@ int main(void)
 	struct stack* head = NULL;
 	printf("Example: push 40, list, pop\n");
 	int push_pop = push_or_pop();
-	// cheks user input on 3 valid comand, look example 
-	// if input is fallse program close
 	while (push_pop)
 	{
 		if (push_pop == 1)
 		{
-			int x = number_from_input();// transleate string to int
+			int x = number_from_input();
 			head = push(head, x);
 		}else if (push_pop == 2)
 		{
@@ -103,8 +101,8 @@ int push_or_pop(void)
 		return 0;
 }
 
-int string_cmd(char* s1, char* s2)// compaers to string
-{   // if s1 are equale to s2 function return 1 else 0
+int string_cmd(char* s1, char* s2)
+{
 	int flag = 1, i;
 	for (i = 0; s1[i] != '\0' && s2[i] != '\0'; ++i)
 	{
