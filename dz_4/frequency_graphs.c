@@ -20,7 +20,7 @@ int main(void)
 	int count = 0;
 	int* graph = NULL;
 	title_t* tops = NULL;
-	int res;
+	int res = 0;
 	while (flag)
 	{
 		switch(flag)
