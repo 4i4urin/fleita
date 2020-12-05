@@ -25,21 +25,19 @@ int main(void)
 	{
 		switch(flag)
 		{
-			case 1: graph = add(graph, &tops, &count); 
-			flag = menu(); break;
-			case 2: show(graph, tops, count); flag = menu(); break;
+			case 1: graph = add(graph, &tops, &count); break;
+			case 2: show(graph, tops, count); break;
 			case 3: 
 			res = is_relate(graph, count);
 			if (res == 1)
 				printf("relateed graph\n");
 			else 
 				printf("unreleated graph\n");
-			flag = menu();
 			break;
-			case 4: 
-			sort_graph(graph, tops, count); flag = menu(); break;
-			default: printf("Don't know such command\n"); flag = menu();
+			case 4: sort_graph(graph, tops, count); break;
+			default: printf("Don't know such command\n"); 
 		}
+		flag = menu();
 	}
 	free(graph);
 	free(tops);
