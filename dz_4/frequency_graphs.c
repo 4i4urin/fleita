@@ -53,16 +53,7 @@ void swap_column(int* graph, int column_sort, int column_basis, int size);
 
 void sort_graph(int* graph, title_t* tops, int count)
 {
-	// add_frequency(graph, tops, count);
-	// list_frequency(tops, count);
-	char* basis =(char*) malloc(count * sizeof(char));
-	for (int i = 0; i < count; ++i)
-		basis[i] = (tops + i)->name;
-	// list(graph, count);
 	buble_sort(tops, graph, count);
-	// list_frequency(tops, count);
-	// list(graph, count);
-	free(basis);
 	list_frequency(tops, count);
 }
 
