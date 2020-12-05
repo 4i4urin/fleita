@@ -12,7 +12,7 @@ int* add(int* graph, title_t** tops, int* count);// добавляет ветв�
 void show(int* graph, title_t* tops, int count);// визуализирует граф в формате png
 int is_relate(int* graph, int count);// проверяет граф на связность
 void sort_graph(int* graph, title_t*, int count);
-void list_frequency(title_t* tops, int count);
+
 
 int main(void)
 {
@@ -45,15 +45,32 @@ int main(void)
 }
 
 
-void buble_sort(title_t* tops, int* graph, int size);
+
 void list(int* arr, int i); // выводит двумерный массив
 void swap_line(int* graph, int line_sort, int line_basis, int size);
 void swap_column(int* graph, int column_sort, int column_basis, int size);
+void list_frequency(title_t* tops, int count);
 
 
 void sort_graph(int* graph, title_t* tops, int count)
 {
-	buble_sort(tops, graph, count);
+	for(int i = 0; i < count - 1; ++i)
+	{
+		int f = 0;
+		for(int j = 0; j < count - i - 1; ++j)
+		{
+			if ((tops + j)->frequency > (tops + j + 1)->frequency)
+			{
+				f = 1;
+				title_t tmp = tops[j];
+				tops[j] = tops[j + 1];
+				tops[j + 1] = tmp;
+				swap_line(graph, j, j + 1, size);
+				swap_column(graph, j, j + 1, size);
+			}
+		} 
+		if (f == 0) break;
+	}
 	list_frequency(tops, count);
 }
 
@@ -80,28 +97,6 @@ void swap_line(int* graph, int A, int B, int size)
 	}
 	free(swap_arr);	
 }
-
-void buble_sort(title_t* tops, int* graph, int size)
-{
-	for(int i = 0; i < size - 1; ++i)
-	{
-		int f = 0;
-		for(int j = 0; j < size - i - 1; ++j)
-		{
-			if ((tops + j)->frequency > (tops + j + 1)->frequency)
-			{
-				f = 1;
-				title_t tmp = tops[j];
-				tops[j] = tops[j + 1];
-				tops[j + 1] = tmp;
-				swap_line(graph, j, j + 1, size);
-				swap_column(graph, j, j + 1, size);
-			}
-		} 
-		if (f == 0) break;
-	}
-}
-
 
 
 void list_frequency(title_t* tops, int count)
