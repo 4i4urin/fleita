@@ -5,6 +5,6 @@
 **Алгоритм**
 -----------------------------------------
 *Подсчёт стпенеи врешини осущесвляется при добавлении врешин пользователем в функции add
-![alt tag](https://github.com/4i4urin/fleita/blob/master/dz_4/add (2).png "Описание будет тут")
+![alt tag](https://github.com/4i4urin/fleita/blob/master/dz_4/add%20(2).png "Описание будет тут")
 
 
