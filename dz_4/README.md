@@ -23,7 +23,7 @@
 
 Структурная схема данного алгоритма
 
-![alt tag](https://github.com/4i4urin/fleita/blob/master/dz_4/sort_graph.png "Структурная схема и всё. Без мам пап и кредитов")
+![alt tag](https://github.com/4i4urin/fleita/blob/master/dz_4/sort_graph_2.png "Структурная схема и всё. Без мам пап и кредитов")
 
 * Пример работы программы
 
