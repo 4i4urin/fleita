@@ -44,7 +44,7 @@
 
 * P.S Структурная схема функции main с пояснениями основных алгоритмов
 
-![alt tag](https://github.com/4i4urin/fleita/blob/master/dz_4/main.png "Не зря же делал")
+![alt tag](https://github.com/4i4urin/fleita/blob/master/dz_4/Main(kek).png "Не зря же делал")
 
 
 
